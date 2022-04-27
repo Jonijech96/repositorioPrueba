@@ -1,0 +1,423 @@
+*{
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: #1A1A1A;
+    margin: 0;
+    color:#F8FFF1;
+}
+
+h1{ font-size: 3.5em;}
+h2{ font-size: 2.7em;}
+h3{ font-size: 2em;}
+p{ font-size: 1.25em;}
+ul{list-style: none;}
+li{ font-size: 1.5em;}
+
+button{
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    color: #6BDF78;
+    background-color: #1A1A1A;
+    cursor: pointer;
+    transition: background,color, 300ms;
+}
+
+button:hover{
+    background: #6BDF78;
+    color: #1A1A1A;
+    
+}
+
+.container{
+    max-width: 1400px;
+    margin: auto;
+}
+
+
+
+header .logo{
+
+    margin: 0;
+    padding: 15px 30px;
+    color: #004B23;
+    font-weight: bold;
+    font-size: 1.5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #1A1A1A;
+    position: sticky;
+    top: 0;
+
+
+}
+
+header .logo img{
+    height: 58px;
+}
+
+header .bars__menu{
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+header .bars__menu span{
+    /* no tienen ese tipo de propiedad */
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #6BDF78;
+    margin-top: 6px;
+    transition: all 600ms;
+    transform-origin: 0px 100%;
+}
+.activeline1__bars-menu{
+    transform: rotate(45deg) translate(-2px,1px);
+}
+
+.activeline2__bars-menu{
+    opacity: 0;
+    margin-left: -30px;
+}
+.activeline3__bars-menu{
+    transform: rotate(-45deg) translate(-4px, 2px);
+}
+
+header nav{
+
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 25px;
+    transition: all 600ms;
+    overflow: hidden;
+    height: 0;
+    width: 0;
+
+}
+
+
+
+header a{
+    padding: 5px 12px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #6BDF78;
+    transition: opacity 300ms;
+}
+header p{
+    margin: 0;
+}
+
+header a:hover{
+    opacity: 0.6;
+    
+}
+
+.menu__active{
+height: 114px;
+width: 100%;
+}
+
+#hero{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    animation: banner 16s infinite linear alternate;
+    /* infinite para que nunca pare */
+    /* alternate para que empiece de cualquier */
+    /* linear para que la transision sea constante */
+    height: 90vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+
+}
+
+@keyframes banner{
+    0%, 20%{
+        background-image: linear-gradient(
+    0deg,
+    rgba(0,0,0,0.5),
+    rgba(0,0,0,0.5)
+    )
+    ,url("/img/futbol5.jpeg");
+    }
+    25%, 45%{
+        background-image: linear-gradient(
+    0deg,
+    rgba(0,0,0,0.5),
+    rgba(0,0,0,0.5)
+    )
+    ,url("/img/foto-hero1.jpg");
+    }
+    50%, 70%{
+        background-image: linear-gradient(
+    0deg,
+    rgba(0,0,0,0.5),
+    rgba(0,0,0,0.5)
+    )
+    ,url("/img/foto-hero2.jpg");
+    }
+    75%, 100%{
+        background-image: linear-gradient(
+    0deg,
+    rgba(0,0,0,0.5),
+    rgba(0,0,0,0.5)
+    )
+    ,url("/img/hero-foto3.jpeg");
+    }
+}
+
+#hero h1{
+    color: white;
+}
+
+#quienes-somos{
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+        )
+        ,url("/img/cancha-vacia.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center center;
+        color: #1A1A1A;
+        text-align: center;
+}
+
+#quienes-somos .container{
+    text-align: center;
+    padding: 200px 12px;
+}
+#quienes-somos .somos-texto{
+    background-color: #6BDF78;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+
+}
+
+#servicios{
+    background-image: linear-gradient(
+    0deg,
+    rgba(0,0,0,0.5),
+    rgba(0,0,0,0.5)
+    )
+    ,url("/img/jugando.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    color: white;
+    text-align: center;
+}
+
+#servicios .container{
+padding: 100px 0px;
+}
+
+#servicios .carta{
+    background-position: center center;
+background-size: cover;
+padding: 20px ;
+margin: 20px;
+border-radius: 15px;
+}
+
+#servicios p{
+    display: none;
+}
+
+#servicios h2{
+    margin-top: 0;
+}
+
+.carta:first-child {
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("/img/comida-h.jpg");
+
+}
+
+.carta:nth-child(2){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("/img/parrilla.jpg");
+}
+
+.carta:nth-child(3){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("/img/alquiler.jpg");
+}
+
+#ubicacion .container{
+    text-align: center;
+    padding: 100px 12px;
+    color: #F8FFF1;
+}
+
+#reservas .container{
+    text-align: center;
+    padding: 100px 12px;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("/img/jugando3.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+#reservas .form{
+    max-width: 540px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin: auto;
+    margin-bottom: 42px;
+}
+.form .title{
+    margin: 0;
+}
+.form p{
+    margin: 0;
+}
+.form label{
+    display: flex;
+    flex-direction: column;
+}
+.form input, .form textarea{
+    border: 2px solid rgba(140, 149, 155, 0.877);
+
+    padding: 12px 16px 12px 16px;
+    border-radius: 8px;
+    margin-top: 8px;
+
+}
+
+.whatsapp{
+    position: fixed;
+    right: 10px;
+    z-index: 1;
+    bottom: 10px;
+}
+
+footer{
+    background-color: #6BDF78;
+}
+footer p{
+    margin: 0;
+    color: rgb(100, 100, 100);
+    padding: 12px;
+}
+footer .container{
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+
+@media (min-width: 720px) {
+
+    header .logo img{
+        height: 70px;
+    }
+
+    header .bars__menu{
+        display: none;
+    }
+
+    header {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-around;
+        backdrop-filter: blur(10px)
+    }
+    header nav{
+        flex-direction: row;
+        padding: 0;
+        display: block;
+        height: 18px;
+    width: 448px;
+    transition: none;
+    }
+
+   
+
+    #quienes-somos{
+        background-image: none;
+        color: black;
+
+    }
+
+    #quienes-somos .container{
+        display: flex;
+        gap: 40px;
+        justify-content: space-around;
+    }
+    #quienes-somos .somos-texto{
+        width: 43rem;
+    }
+
+    #quienes-somos .img-container{
+        background-image: url("img/somos-lamaquina.png");
+        background-size: cover;
+        height: 500px;
+        width: 38rem;
+        background-position: center center;
+
+    }
+    #quienes-somos h2{
+        margin-top: 0;
+    }
+
+    #servicios .cartas{
+        display: flex;
+        justify-content: center;
+    }
+
+    #servicios p{
+        display: block;
+    }
+
+    .whatsapp{
+        display: none;
+    }
+    
+}
