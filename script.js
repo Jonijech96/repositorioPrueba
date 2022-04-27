@@ -12,3 +12,5 @@ function animateBars() {
 
   container__menu.classList.toggle("menu__active");
 }
+
+console.log("hola me falto este mensaje");
